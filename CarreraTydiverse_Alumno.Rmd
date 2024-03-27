@@ -141,7 +141,8 @@ select(cran, ip_id, package, country)
 ```
 5. Elige todas las variables entre `r_arch y country` 
 ```{r}
-
+#Establecemos : para que vaya de un extremo (r_arch) a otro (country)
+select(cran, r_arch:country)
 ```
 5. Puedes usar el signo (-) para no coger una columna determinada. Selecciona todas las columnas menos las que están entre `date y size` 
 ```{r}
