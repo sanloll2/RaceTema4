@@ -268,10 +268,11 @@ pack_sum <- by_package %>% summarize(count = n(), unique = n_distinct(ip_id),
 pack_sum
 ```
 22. Muestra el 1% de los paquetes que han sido más descargados. Para ello puedes utilizar la función `quantile(????, probs=0.99)`. Siendo ??? la variable de interés, que te permitirá estimar el umbral. Los valores por encima serán los que nos interesen. Almacena estos paquetes **top descargas** en la variable `top_counts`. **NOTA: De ahora en adelante concatena todas las operaciones partiendo del elemento `cran`, usando _pipes_**.
+
 ```{r}
 
-
-
+#Variable de interés: 
+#umbral <- cran %>% quantile(pack_sum$count, probs=0.99)
 
 
 
