@@ -207,8 +207,10 @@ cran3 <- cran %>% select(ip_id, package, size)
 
 15. Crea una nueva variable en `cran3` llamada `size_mb` que contenga el tamaño de la descarga expresado en Mbytes ($1Mbyte=2^{20}$ bytes).
 ```{r}
+cran3$size_mb <- cran3$size / (2^20)
 
-
+#La mostramos:
+head(cran3)
 ```
 16. Sabiendo que 1Gb son $2^{10}$ Mbytes, crea una nueva variable en `cran3` llamada `size_gb` que contenga el tamaño de la descarga expresado en Gbytes.
 ```{r}
